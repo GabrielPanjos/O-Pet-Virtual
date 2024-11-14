@@ -1,14 +1,13 @@
 public class Comida {
 
+    VirtualPet pet = new VirtualPet("Gatinho");
+
     String nome;
     double feedFome;
     int nivelDeSabor;
     double feedSede;
     int quantidade;
-
-
     Inventario inventario;
-
 
     public Comida(String nome, double feedFome, int nivelDeSabor, double feedSede, int quantidade, Inventario inventario) {
         this.nome = nome;
@@ -19,19 +18,18 @@ public class Comida {
         this.inventario = inventario;
 
         if (quantidade > 0) {
-            inventario.adicionarItem(this.nome);
+            inventario.adicionarItem(this.nome, this.quantidade);
         }
     }
 
     public static void main(String[] args) {
-
         Inventario inventario = new Inventario();
 
-
         Comida pao = new Comida("Pedaço de Pão", 10, 10, 0, 1, inventario);
-        Comida queijo = new Comida("Queijo", 5, 8, 0, 2, inventario);
+        Comida garrafaAgua = new Comida("Garrafa d'água", 0, 10, 10, 1, inventario);
 
-
-        inventario.verBolsa();
     }
+
+
+
 }

@@ -29,14 +29,23 @@ public class Main {
             Thread.sleep(3000);
             System.out.println("\n(Você) Que barulho é esse?");
             Thread.sleep(3000);
-            System.out.println("Congelando de frio, você se depara com um ser perqueno, indefeso, mas surpreendentemente feroz.");
+            System.out.println("Congelando de frio, você se depara com um ser pequeno, indefeso, mas surpreendentemente feroz.");
             Thread.sleep(3000);
             System.out.println("Com a mão você tenta se aproximar...");
             Thread.sleep(1000);
 
+
+
             // Primeira ação do jogo
+
             Inventario inventario = new Inventario();
+
+            Comida pao = new Comida("Pedaço de Pão", 10, 10, 0, 1, inventario);
+            Comida garrafaAgua = new Comida("Garrafa d'água", 0, 10, 10, 1, inventario);
+
             VirtualPet pet = new VirtualPet("Gatinho");
+
+
 
             pet.atacando();
 
@@ -78,7 +87,7 @@ public class Main {
                             break;
                         case 2:
                             inventario.verBolsa();
-                            break;
+
                         case 3:
                             System.out.println("*Você assustou o gato*");
                             Thread.sleep(2000);
@@ -94,9 +103,9 @@ public class Main {
                 }
             }
 
-            System.out.println("Digite o nome do seu animal de estimação:");
-            String nomePet = input.nextLine();
-            pet.setNome(nomePet);
+            // System.out.println("Digite o nome do seu animal de estimação:");
+            // String nomePet = input.nextLine();
+            // pet.setNome(nomePet);
 
         } catch (InterruptedException e) {
             System.out.println("Ocorreu um erro durante a execução do jogo...");

@@ -68,7 +68,18 @@ class VirtualPet {
     }
 
     public void comendo() {
+        try {
 
+            System.out.println(nome + " se aproxima, cheirando oque tem na mão.");
+            Thread.sleep(2000);
+            System.out.println("("+ nome +") *comendo*");
+            // Implementar o aumento de stats dependendo de qual comida o pet esta comendo
+
+        } catch (InterruptedException e) {
+
+            System.out.println("Ocorreu um erro durante a execução do jogo...");
+            e.printStackTrace();
+        }
     }
 
     public void descansando() {

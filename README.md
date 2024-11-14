@@ -41,7 +41,6 @@ Este projeto está em andamento. Se você deseja contribuir, fique à vontade pa
 
 ## Roadmap
 
-- [ ] Melhorar a IA do pet para reagir de maneira mais dinâmica.
 - [ ] Adicionar mais itens ao inventário e suas funcionalidades.
 - [ ] Implementar mais ações e interações com o pet.
 - [ ] Melhorar o sistema de vitória e derrota.
